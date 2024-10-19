@@ -1,0 +1,44 @@
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore virtual environments
+venv/
+ENV/
+env/
+.venv/
+.ENV/
+bin/
+Lib/
+Include/
+Scripts/
+
+# Ignore environment variables and config
+.env
+
+# Ignore VSCode settings
+.vscode/
+*.code-workspace
+
+# Ignore egg-info directories
+*.egg-info/
+*.egg
+*.eggs
+
+# Ignore logs and other output files
+*.log
+
+# Ignore Python compiled files
+*.so
+*.pyd
+
+# Ignore data files and model stores (can be modified based on your need)
+Data/
+storage/
+
+# Ignore other system-specific files
+.DS_Store
+Thumbs.db
