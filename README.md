@@ -134,6 +134,8 @@ Follow the steps below to set up the project locally:
 ---
 
 ## Project Overview
+![QA with Documents Interface](./screenshots/Screenshot_117.png)
+![Document Upload Example](./screenshots/Screenshot_119.png)
 
 This project involves three main components:
 
