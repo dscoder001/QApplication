@@ -1,5 +1,4 @@
 from pathlib import Path
-import PyPDF2
 import streamlit as st
 from QAWithPDF.data_ingestion import load_data
 from QAWithPDF.embedding import download_gemini_embedding
