@@ -20,7 +20,7 @@ def download_gemini_embedding(model, document):
         # Set global settings instead of using ServiceContext
         Settings.llm = model  # Replace with your custom LLM model
         Settings.embed_model = gemini_embed_model
-        Settings.chunk_size = 800
+        Settings.chunk_size = 1024
         Settings.chunk_overlap = 20
 
         logging.info("Creating VectorStoreIndex")
@@ -31,6 +31,7 @@ def download_gemini_embedding(model, document):
 
         logging.info("Creating query engine")
         query_engine = index.as_query_engine()
+        print(query_engine.get_prompts())
 
         return query_engine
     except Exception as e:

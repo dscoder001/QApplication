@@ -23,8 +23,11 @@ def load_model():
     - Gemini: An instance of the Gemini class initialized with the 'gemini-pro' model.
     """
     try:
-        model=Gemini(models='gemini-pro',api_key=GOOGLE_API_KEY)
+        api_key = os.getenv("GOOGLE_API_KEY")
+        if not api_key:
+            raise ValueError("GOOGLE_API_KEY environment variable not set")
+        
+        model = Gemini(api_key=api_key, models='gemini-1.5-flash')
         return model
     except Exception as e:
-        raise customexception(e,sys)
-        
+        raise customexception(e, sys)
