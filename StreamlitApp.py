@@ -1,3 +1,4 @@
+from pathlib import Path
 import streamlit as st
 from QAWithPDF.data_ingestion import load_data
 from QAWithPDF.embedding import download_gemini_embedding
@@ -10,6 +11,8 @@ def main():
     doc=st.file_uploader("upload your document")
 
     if doc:
+        Path("Data").mkdir(exist_ok=True)
+        Path("Data/uploaded.pdf").touch(exist_ok=True)
         with open(f"Data/uploaded.pdf", 'wb') as f: 
             f.write(doc.read())
     
