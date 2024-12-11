@@ -8,6 +8,10 @@ def main():
     st.set_page_config("QA with Documents")
     
     doc=st.file_uploader("upload your document")
+
+    if doc:
+        with open(f"Data/uploaded.pdf", 'wb') as f: 
+            f.write(doc.read())
     
     st.header("QA with Documents(Information Retrieval)")
     
